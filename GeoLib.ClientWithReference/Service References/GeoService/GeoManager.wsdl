@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GeoManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8043/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8043/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GeoLib.Contracts" />
+      <xsd:import schemaLocation="http://localhost:8043/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8043/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGeoService_GetZipInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZipInfo" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetZipInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZipInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetZipInfo_NotFoundDataFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/GeoLib.Contracts" name="detail" element="q1:NotFoundData" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStates" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetZipByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZipByState" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetZipByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZipByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetZipForRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZipForRange" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_GetZipForRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZipForRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_UpdateZipCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateZipCity" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_UpdateZipCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateZipCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_UpdateZipCityBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateZipCityBatch" />
+  </wsdl:message>
+  <wsdl:message name="IGeoService_UpdateZipCityBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateZipCityBatchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGeoService">
+    <wsdl:operation name="GetZipInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGeoService/GetZipInfo" message="tns:IGeoService_GetZipInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGeoService/GetZipInfoResponse" message="tns:IGeoService_GetZipInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IGeoService/GetZipInfoNotFoundDataFault" name="NotFoundDataFault" message="tns:IGeoService_GetZipInfo_NotFoundDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGeoService/GetStates" message="tns:IGeoService_GetStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGeoService/GetStatesResponse" message="tns:IGeoService_GetStates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZipByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGeoService/GetZipByState" message="tns:IGeoService_GetZipByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGeoService/GetZipByStateResponse" message="tns:IGeoService_GetZipByState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZipForRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGeoService/GetZipForRange" message="tns:IGeoService_GetZipForRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGeoService/GetZipForRangeResponse" message="tns:IGeoService_GetZipForRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateZipCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGeoService/UpdateZipCity" message="tns:IGeoService_UpdateZipCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGeoService/UpdateZipCityResponse" message="tns:IGeoService_UpdateZipCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateZipCityBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGeoService/UpdateZipCityBatch" message="tns:IGeoService_UpdateZipCityBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGeoService/UpdateZipCityBatchResponse" message="tns:IGeoService_UpdateZipCityBatch_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGeoService" type="tns:IGeoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetZipInfo">
+      <soap:operation soapAction="http://tempuri.org/IGeoService/GetZipInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="NotFoundDataFault">
+        <soap:fault use="literal" name="NotFoundDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStates">
+      <soap:operation soapAction="http://tempuri.org/IGeoService/GetStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZipByState">
+      <soap:operation soapAction="http://tempuri.org/IGeoService/GetZipByState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZipForRange">
+      <soap:operation soapAction="http://tempuri.org/IGeoService/GetZipForRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateZipCity">
+      <soap:operation soapAction="http://tempuri.org/IGeoService/UpdateZipCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateZipCityBatch">
+      <soap:operation soapAction="http://tempuri.org/IGeoService/UpdateZipCityBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GeoManager">
+    <wsdl:port name="BasicHttpBinding_IGeoService" binding="tns:BasicHttpBinding_IGeoService">
+      <soap:address location="http://localhost:8043/GeoService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

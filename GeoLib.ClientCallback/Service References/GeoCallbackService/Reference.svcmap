@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4843d602-ff86-420a-809d-a326f781b8b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:22402/Callback" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GeoCallbackService.wsdl" MetadataType="Wsdl" ID="cd06de91-7194-4a8a-b17f-90eea9be9421" SourceId="1" SourceUrl="http://localhost:22402/Callback?wsdl" />
+    <MetadataFile FileName="Callback.xsd" MetadataType="Schema" ID="1f54f600-d130-4c94-bc14-b2b2f44a21be" SourceId="1" SourceUrl="http://localhost:22402/Callback?xsd=xsd1" />
+    <MetadataFile FileName="Callback.disco" MetadataType="Disco" ID="93d269d9-9b78-4727-83c4-fd67ba4b96fa" SourceId="1" SourceUrl="http://localhost:22402/Callback?disco" />
+    <MetadataFile FileName="Callback1.xsd" MetadataType="Schema" ID="626bee7c-8559-49f2-8cd7-ab987943da82" SourceId="1" SourceUrl="http://localhost:22402/Callback?xsd=xsd0" />
+    <MetadataFile FileName="Callback2.xsd" MetadataType="Schema" ID="a8655086-62d8-4740-835a-cfd9b3ccd311" SourceId="1" SourceUrl="http://localhost:22402/Callback?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

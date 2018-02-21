@@ -1,0 +1,17 @@
+﻿<Window x:Class="GeoLib.WpfHost.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeoLib.WpfHost"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="322.799" Width="626.43">
+    <Grid Margin="0,0,2,3" HorizontalAlignment="Center" Width="616">
+        <Button x:Name="StartBtn" Content="Start" HorizontalAlignment="Center" Margin="96,50,107,0" VerticalAlignment="Top" Width="413" Height="38" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Click="StartBtn_Click"/>
+        <Button x:Name="StopBtn" Content="Stop" HorizontalAlignment="Center" Margin="96,93,107,0" VerticalAlignment="Top" Width="413" Height="38" Click="StopBtn_Click" FontFamily="Calibri" FontSize="18" FontWeight="Bold" IsEnabled="False"/>
+        <Label x:Name="Threadlbl" Content="" Margin="42,10,47,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="527" HorizontalAlignment="Center"/>
+        <Button x:Name="InProcBtn" Content="In-Proc Service" HorizontalAlignment="Left" Margin="96,164,0,0" VerticalAlignment="Top" Width="150" Height="30" FontFamily="Calibri" FontSize="18" FontWeight="Bold" Click="InProcBtn_Click"/>
+        <Label x:Name="InProcLbl" Content="" HorizontalAlignment="Left" Margin="96,211,0,0" VerticalAlignment="Top" Width="413" FontFamily="Calibri" FontSize="18" Height="55"/>
+
+    </Grid>
+</Window>
