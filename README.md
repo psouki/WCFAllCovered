@@ -1,5 +1,5 @@
 # WCF All Covered
-This is an extensive study of WCF web services. It was inspired in the Miguel Castro's pluralsight course WCF End-to-End
+This is an extensive and all explained study of WCF web services. It was inspired in the Miguel Castro's pluralsight course WCF End-to-End
 
 In this project is possible to verify implementations and explanations of: 
 
